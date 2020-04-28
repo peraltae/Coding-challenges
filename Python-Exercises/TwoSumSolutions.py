@@ -23,7 +23,7 @@ class TwoSumSolutions:
     Enumerate solution was conceived by notes in the Two-Sum discussion page 
     link: https://leetcode.com/articles/two-sum/ 
     '''
-    def enumerate(self, nums, target) -> List[int]:
+    def enumerate(self, nums, target):
 
         checker = {}
 
@@ -43,18 +43,16 @@ class TwoSumSolutions:
 				#if the compliment does exist, then return the value for its key, and the current enumeration
                 return [checker[compliment], i]
 
-		return []
 
 
     #Brute force approach
-	def bruteForce(self,nums,target) -> List[int]:
-			for i in range(len(nums)):
-				for j in range(len(nums)):
-					if nums[j] == target - nums[i]:
-						return [i,j]
+	def bruteForce(self,nums,target):
+            for i in range(len(nums)):
+                for j in range(len(nums)):
+                    if nums[j] == target - nums[i]:
+                        return [i,j]
 
 
-			return []
 
 
 
