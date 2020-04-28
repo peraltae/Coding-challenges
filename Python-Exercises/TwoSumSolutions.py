@@ -33,11 +33,8 @@ class TwoSumSolutions:
             #Find the compliment of the target and num at enumeration i
             compliment = target - num
 
-            
-
 			#If the compliment of the target minus the current num isn't in the dictionary, then add it with 
             # the nums[i] as key and index as the value
-
 			
             if compliment not in checker:
                 checker[num] = i  # if the compliment is not in the dict, then num:i is added
