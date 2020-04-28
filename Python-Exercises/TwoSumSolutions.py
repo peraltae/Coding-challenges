@@ -30,25 +30,29 @@ class TwoSumSolutions:
         checker = {}
 
         for i, num in enumerate(nums):
-            # Find the compliment of the target and num at enumeration i
+            #Find the compliment of the target and num at enumeration i
             compliment = target - num
 
-            '''
-			If the compliment of the target minus the current num isn't in the dictionary, then add it with the
-			nums[i] as key and index as the value
-			'''
+            
+
+			#If the compliment of the target minus the current num isn't in the dictionary, then add it with 
+            # the nums[i] as key and index as the value
+
+			
             if compliment not in checker:
                 checker[num] = i  # if the compliment is not in the dict, then num:i is added
 
             else:
-                # if the compliment does exist, then return the value for its key, and the current enumeration
+                #if the compliment does exist, then return the value for its key, and the current enumeration
                 return [checker[compliment], i]
 
     
-
-    # Brute force approach
+    #Brute force approach
     def bruteForce(self, nums, target):
         for i in range(len(nums)):
             for j in range(len(nums)):
                 if nums[j] == target - nums[i]:
                     return [i, j]
+
+
+
