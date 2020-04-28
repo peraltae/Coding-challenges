@@ -45,6 +45,8 @@ class TwoSumSolutions:
 
 		return []
 
+
+    #Brute force approach
 	def bruteForce(self,nums,target) -> List[int]:
 			for i in range(len(nums)):
 				for j in range(len(nums)):
