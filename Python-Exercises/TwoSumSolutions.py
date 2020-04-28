@@ -11,6 +11,7 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 
 '''
+
 from _ast import List
 
 
@@ -23,12 +24,12 @@ class TwoSumSolutions:
     Enumerate solution was conceived by notes in the Two-Sum discussion page 
     link: https://leetcode.com/articles/two-sum/ 
     '''
+
     def enumerate(self, nums, target):
 
         checker = {}
 
         for i, num in enumerate(nums):
-
             # Find the compliment of the target and num at enumeration i
             compliment = target - num
 
@@ -37,22 +38,17 @@ class TwoSumSolutions:
 			nums[i] as key and index as the value
 			'''
             if compliment not in checker:
-                checker[num] = i #if the compliment is not in the dict, then num:i is added
+                checker[num] = i  # if the compliment is not in the dict, then num:i is added
 
             else:
-				#if the compliment does exist, then return the value for its key, and the current enumeration
+                # if the compliment does exist, then return the value for its key, and the current enumeration
                 return [checker[compliment], i]
 
+    
 
-
-    #Brute force approach
-	def bruteForce(self,nums,target):
-            for i in range(len(nums)):
-                for j in range(len(nums)):
-                    if nums[j] == target - nums[i]:
-                        return [i,j]
-
-
-
-
-
+    # Brute force approach
+    def bruteForce(self, nums, target):
+        for i in range(len(nums)):
+            for j in range(len(nums)):
+                if nums[j] == target - nums[i]:
+                    return [i, j]
