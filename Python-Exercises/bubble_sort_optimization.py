@@ -6,8 +6,9 @@ to their final correct positions at the top X highest slots in the array. So, th
 is no need for each sweep to work over the entire array: later sweeps can stop earlier. 
 
 Figure out how to trip the inner loop with successive passes, but without affecting the accuracy of the sorting.
---> Continually deduct the number of rounds completed from the length of iteration of the inner for-loop
-
+--> Continually deduct the number of rounds completed from the range iterated in the inner loop, len(nums) -1.
+    Doing so, we do not iterate over the X largest items after X completed rounds.
+    
 2) Bubble Sort has a very nice property: if the list is already partially sorted, Bubble Sort doesn’t need 
 the entire N sweeps to sort N items. Specifically, it can stop the outer loop earlier under some conditions. 
 
