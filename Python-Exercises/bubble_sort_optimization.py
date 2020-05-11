@@ -46,13 +46,7 @@ def bubble_sort(nums):
 
 
 
-		
-
-	#print statements for debugging
-	print("outer-loops done:", outer_loop_count)
-	print("inner-loops done:", inner_loop_count)
-	print(nums, "\n")
-
+	
 
 
 
